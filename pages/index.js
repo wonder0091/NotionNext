@@ -1,19 +1,11 @@
 import BLOG from '@/blog.config'
 import { getPostBlocks } from '@/lib/notion'
-import { getGlobalNotionData } from '@/lib/notion/getNotionData'
-import { useGlobal } from '@/lib/global'
+import { getGlobalData } from '@/lib/notion/getNotionData'
 import { generateRss } from '@/lib/rss'
 import { generateRobotsTxt } from '@/lib/robots.txt'
-import dynamic from 'next/dynamic'
-import { Suspense, useEffect, useState } from 'react'
-import Loading from '@/components/Loading'
-
-const layout = 'LayoutIndex'
-
-/**
- * 加载默认主题
- */
-const DefaultLayout = dynamic(() => import(`@/themes/${BLOG.THEME}/${layout}`), { ssr: true })
+import { getLayoutByTheme } from '@/themes/theme'
+import { siteConfig } from '@/lib/config'
+import { useRouter } from 'next/router'
 
 /**
  * 首页布局
@@ -21,21 +13,9 @@ const DefaultLayout = dynamic(() => import(`@/themes/${BLOG.THEME}/${layout}`), 
  * @returns
  */
 const Index = props => {
-  // 动态切换主题
-  const { theme } = useGlobal()
-  const [Layout, setLayout] = useState(DefaultLayout)
-  // 切换主题
-  useEffect(() => {
-    const loadLayout = async () => {
-      const newLayout = await dynamic(() => import(`@/themes/${theme}/${layout}`))
-      setLayout(newLayout)
-    }
-    loadLayout()
-  }, [theme])
-
-  return <Suspense fallback={<Loading />}>
-        <Layout {...props} />
-    </Suspense>
+  // 根据页面路径加载不同Layout文件
+  const Layout = getLayoutByTheme({ theme: siteConfig('THEME'), router: useRouter() })
+  return <Layout {...props} />
 }
 
 /**
@@ -44,18 +24,10 @@ const Index = props => {
  */
 export async function getStaticProps() {
   const from = 'index'
-  const props = await getGlobalNotionData({ from })
+  const props = await getGlobalData({ from })
 
-  const { siteInfo } = props
-  props.posts = props.allPages.filter(page => page.type === 'Post' && page.status === 'Published')
+  props.posts = props.allPages?.filter(page => page.type === 'Post' && page.status === 'Published')
 
-  const meta = {
-    title: `${siteInfo?.title} | ${siteInfo?.description}`,
-    description: siteInfo?.description,
-    image: siteInfo?.pageCover,
-    slug: '',
-    type: 'website'
-  }
   // 处理分页
   if (BLOG.POST_LIST_STYLE === 'scroll') {
     // 滚动列表默认给前端返回所有数据
@@ -81,13 +53,12 @@ export async function getStaticProps() {
     generateRss(props?.latestPosts || [])
   }
 
+  // 生成全文索引 - 仅在 yarn build 时执行 && process.env.npm_lifecycle_event === 'build'
+
   delete props.allPages
 
   return {
-    props: {
-      meta,
-      ...props
-    },
+    props,
     revalidate: parseInt(BLOG.NEXT_REVALIDATE_SECOND)
   }
 }
