@@ -20,8 +20,8 @@ const CONFIG = {
 
   // 菜单
   NEXT_MENU_HOME: true, // 显示首页
-  NEXT_MENU_CATEGORY: true, // 显示分类
-  NEXT_MENU_TAG: true, // 显示标签
+  NEXT_MENU_CATEGORY: false, // 显示分类
+  NEXT_MENU_TAG: false, // 显示标签
   NEXT_MENU_ARCHIVE: true, // 显示归档
   NEXT_MENU_SEARCH: true, // 显示搜索
 
