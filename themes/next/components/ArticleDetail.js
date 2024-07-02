@@ -94,7 +94,7 @@ export default function ArticleDetail(props) {
                     <ShareBar post={post} />
 
                     {/* 版权声明 */}
-                    {post?.type === 'Post' && <ArticleCopyright author={siteConfig('AUTHOR')} url={url} />}
+                    {post?.type === 'Post' && <ArticleCopyright author={siteConfig('AUTHOR')} url={url} label="文章内容网络收集，具有时效性；如有侵权请联系邮箱删除内容wonder0091@gmail.com  " />}
 
                     {/* 推荐文章 */}
                     {post?.type === 'Post' && <RecommendPosts currentPost={post} recommendPosts={recommendPosts} />}
