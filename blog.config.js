@@ -261,6 +261,13 @@ const BLOG = {
             'https://p2.music.126.net/04BNO_9HnY_JewREA1KWSQ==/2921402396652922.jpg?param=130y130'
     },
     {
+      name: 'コトダマ紬ぐ未来',
+      artist: '山崎もえ',
+      url: 'https://music.163.com/song/media/outer/url?id=427419615.mp3',
+      cover:
+            'https://p2.music.126.net/yWCEGRrdrNlZMHZJ5ZFrBg==/1366692968105602.jpg?param=130y130'
+    },
+    {
       name: 'Snowdream',
       artist: 'VibeNova',
       url: 'https://music.163.com/song/media/outer/url?id=568709232.mp3',
@@ -274,13 +281,7 @@ const BLOG = {
       cover:
             'https://p1.music.126.net/goHT6OraLkoxvnOAV0FotA==/2515682604416416.jpg?param=130y130'
     },
-    {
-      name: '3253212',
-      artist: 'reche',
-      url: 'https://music.163.com/song/media/outer/url?id=2050640265.mp3',
-      cover:
-            'https://p2.music.126.net/sasLzXYbp6bkvaBSCvPcVQ==/109951168638758568.jpg?param=130y130'
-    },
+    
     {
       name: '从别后',
       artist: '悟我',
@@ -294,13 +295,41 @@ const BLOG = {
       url: 'https://music.163.com/song/media/outer/url?id=1407540299.mp3',
       cover:
             'https://p2.music.126.net/WMI23jw0cR1LqASqTFsc1g==/109951164768758120.jpg?param=130y130'
-    },
-    {
+    }, 
+      {
       name: 'WHITE ALBUM PIANO',
       artist: '石川真也',
       url: 'https://music.163.com/song/media/outer/url?id=32303027.mp3',
       cover:
             'https://p1.music.126.net/NN-AEi5dGnBb9YQwd0_sdQ==/7824124744135817.jpg?param=130y130'
+    },
+    {
+      name: 'あの森で待ってる',
+      artist: 'ボンジュール鈴木',
+      url: 'https://music.163.com/song/media/outer/url?id=30798046.mp3',
+      cover:
+            'https://p1.music.126.net/XV1sdSej-Tl1J7dGPeQdxQ==/7841716929549407.jpg?param=130y130'
+    },
+    {
+      name: '3253212',
+      artist: 'reche',
+      url: 'https://music.163.com/song/media/outer/url?id=2050640265.mp3',
+      cover:
+            'https://p2.music.126.net/sasLzXYbp6bkvaBSCvPcVQ==/109951168638758568.jpg?param=130y130'
+    },
+    {
+      name: '如旧',
+      artist: 'YGY / 洛天依 / 乐正绫',
+      url: 'https://music.163.com/song/media/outer/url?id=1305123469.mp3',
+      cover:
+            'https://p1.music.126.net/7lNhsQb-4WOhqOFBo66duw==/109951163518204926.jpg?param=130y130'
+    },
+    {
+      name: '歌に形はないけれど',
+      artist: '花たん',
+      url: 'https://music.163.com/song/media/outer/url?id=27548281.mp3',
+      cover:
+            'https://p2.music.126.net/sK2Rsvagw2iHFG6_jTqb3Q==/5752644836589495.jpg?param=130y130'
     },
     {
       name: '秦时明月-国色天香',
