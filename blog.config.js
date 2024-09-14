@@ -280,15 +280,14 @@ const BLOG = {
       url: 'https://music.163.com/song/media/outer/url?id=2050640265.mp3',
       cover:
             'https://p2.music.126.net/sasLzXYbp6bkvaBSCvPcVQ==/109951168638758568.jpg?param=130y130'
-    }
-    ,
+    },
     {
       name: 'I Really Want to Stay At Your House',
       artist: 'Rosa Walton / Hallie Coggins',
       url: 'https://music.163.com/song/media/outer/url?id=1496089152.mp3',
       cover:
             'https://p1.music.126.net/tshh9Uwf_ao_YFJMQTnM0Q==/109951165476489856.jpg?param=130y130'
-    } ,
+    },
     {
       name: '从别后',
       artist: '悟我',
@@ -309,7 +308,8 @@ const BLOG = {
       url: 'https://music.163.com/song/media/outer/url?id=32303027.mp3',
       cover:
             'https://p1.music.126.net/NN-AEi5dGnBb9YQwd0_sdQ==/7824124744135817.jpg?param=130y130'
-    },{
+    },
+    {
       name: '歌に形はないけれど',
       artist: '花たん',
       url: 'https://music.163.com/song/media/outer/url?id=332699084.mp3',
