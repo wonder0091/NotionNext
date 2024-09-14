@@ -290,7 +290,7 @@ const BLOG = {
     },
     {
       name: 'Letter',
-      artist: 'SHE'S',
+      artist: 'SHES',
       url: 'https://music.163.com/song/media/outer/url?id=1407540299.mp3',
       cover:
             'https://p2.music.126.net/WMI23jw0cR1LqASqTFsc1g==/109951164768758120.jpg?param=130y130'
