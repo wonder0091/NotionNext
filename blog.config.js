@@ -280,6 +280,20 @@ const BLOG = {
       url: 'https://music.163.com/song/media/outer/url?id=2050640265.mp3',
       cover:
             'https://p2.music.126.net/sasLzXYbp6bkvaBSCvPcVQ==/109951168638758568.jpg?param=130y130'
+    },
+    {
+      name: '从别后',
+      artist: '悟我',
+      url: 'https://music.163.com/song/media/outer/url?id=1406025645.mp3',
+      cover:
+            'https://p1.music.126.net/sb5vlbS_Vt5lg9tKtbMxTA==/109951164511663354.jpg?param=130y130'
+    },
+    {
+      name: 'Letter',
+      artist: 'SHE'S',
+      url: 'https://music.163.com/song/media/outer/url?id=1407540299.mp3',
+      cover:
+            'https://p2.music.126.net/WMI23jw0cR1LqASqTFsc1g==/109951164768758120.jpg?param=130y130'
     }
   ],
   MUSIC_PLAYER_METING: process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING || false, // 是否要开启 MetingJS，从平台获取歌单。会覆盖自定义的 MUSIC_PLAYER_AUDIO_LIST，更多配置信息：https://github.com/metowolf/MetingJS
