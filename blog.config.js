@@ -317,11 +317,11 @@ const BLOG = {
             'https://p1.music.126.net/XV1sdSej-Tl1J7dGPeQdxQ==/7841716929549407.jpg?param=130y130'
     },
     {
-      name: '3253212',
-      artist: 'reche',
-      url: 'https://music.163.com/song/media/outer/url?id=2050640265.mp3',
+      name: '永遠に咲く花',
+      artist: 'AiRI',
+      url: 'https://music.163.com/song/media/outer/url?id=451521472.mp3',
       cover:
-            'https://p2.music.126.net/sasLzXYbp6bkvaBSCvPcVQ==/109951168638758568.jpg?param=130y130'
+            'https://p1.music.126.net/e5kyVkJAjazSNLwbGC0WKQ==/18665309394734377.jpg?param=130y130'
     },
     {
       name: '如旧',
