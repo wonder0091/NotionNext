@@ -238,7 +238,9 @@ const BLOG = {
   WIDGET_PET: process.env.NEXT_PUBLIC_WIDGET_PET || true, // 是否显示宠物挂件
   WIDGET_PET_LINK:
         process.env.NEXT_PUBLIC_WIDGET_PET_LINK ||
-        'https://cdn.jsdelivr.net/npm/live2d-widget-model-haru02@1.0.2/assets/haru02.model.json',
+        'https://cdn.jsdelivr.net/npm/live2d-widget-model@1.0.1/model/bilibili-live/22/index.json',
+  //https://cdn.jsdelivr.net/npm/live2d-widget-model-z16/assets/z16.model.json
+  //haru02 https://cdn.jsdelivr.net/npm/live2d-widget-model-haru02@1.0.2/assets/haru02.model.json
   //小埋 https://imuncle.github.io/live2d/model/xiaomai/xiaomai.model.json
   //蕾姆 https://imuncle.github.io/live2d/model/rem/model.json
   //丛云 https://imuncle.github.io/live2d/model/murakumo/index.json
