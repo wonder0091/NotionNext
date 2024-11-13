@@ -19,7 +19,7 @@ function isMobilePage() {
   return window.innerWidth <= 768;
 }
 // 使用判断条件加载Live2D模型
-if (showPet && !isMobile && !isMobilePage()) {
+if (showPet && !isMobile() && !isMobilePage()) {
   Promise.all([
         loadExternalResource('https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/live2d.min.js', 'js')
       ]).then((e) => {
