@@ -45,6 +45,7 @@ export default function Live2D() {
   }
 
   return (
+    showPet && !isMobile() && // 只根据 showPet 和 isMobile() 判断
     <canvas
       id='live2d'
       width='280'
