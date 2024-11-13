@@ -14,8 +14,13 @@ export default function Live2D() {
   const petLink = siteConfig('WIDGET_PET_LINK')
 
   useEffect(() => {
-    if (showPet && !isMobile()) {
-      Promise.all([
+    // 定义判断是否为手机页面的函数
+function isMobilePage() {
+  return window.innerWidth <= 768;
+}
+// 使用判断条件加载Live2D模型
+if (showPet && !isMobile && !isMobilePage()) {
+  Promise.all([
         loadExternalResource('https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/live2d.min.js', 'js')
       ]).then((e) => {
         if (typeof window?.loadlive2d !== 'undefined') {
