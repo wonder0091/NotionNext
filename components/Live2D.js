@@ -12,17 +12,17 @@ export default function Live2D() {
   const { theme, switchTheme } = useGlobal()
   const showPet = JSON.parse(siteConfig('WIDGET_PET'))
   const petLink = siteConfig('WIDGET_PET_LINK')
+  // 设定手机页面宽度，比如 768 像素
+const MOBILE_WIDTH = 768
 
   useEffect(() => {
-    // 定义判断是否为手机页面的函数
-function isMobilePage() {
-  return window.innerWidth <= 768;
-}
-// 使用判断条件加载Live2D模型
-if (showPet && !isMobile() && !isMobilePage()) {
-  Promise.all([
-        loadExternalResource('https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/live2d.min.js', 'js')
-      ]).then((e) => {
+    if (showPet && !isMobile() && window.innerWidth > MOBILE_WIDTH)) {
+      Promise.all([
+        loadExternalResource(
+          'https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/live2d.min.js',
+          'js'
+        )
+      ]).then(e => {
         if (typeof window?.loadlive2d !== 'undefined') {
           // https://github.com/xiazeyu/live2d-widget-models
           try {
