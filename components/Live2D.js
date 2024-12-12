@@ -45,10 +45,11 @@ export default function Live2D() {
   }
 
   return (
+    showPet && !isMobile() && // 只根据 showPet 和 isMobile() 判断
     <canvas
       id='live2d'
       width='280'
-      height='250'
+      height='500'
       onClick={handleClick}
       className='cursor-grab'
       onMouseDown={e => e.target.classList.add('cursor-grabbing')}
