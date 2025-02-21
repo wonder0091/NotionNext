@@ -18,14 +18,14 @@ module.exports = {
   WIDGET_PET: process.env.NEXT_PUBLIC_WIDGET_PET || true, // 是否显示宠物挂件
   WIDGET_PET_LINK:
     process.env.NEXT_PUBLIC_WIDGET_PET_LINK ||
-    'https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json', // 挂件模型地址 @see https://github.com/xiazeyu/live2d-widget-models
+    'https://cdn.jsdelivr.net/npm/live2d-widget-model-z16/assets/z16.model.json', // 挂件模型地址 @see https://github.com/xiazeyu/live2d-widget-models
   WIDGET_PET_SWITCH_THEME:
-    process.env.NEXT_PUBLIC_WIDGET_PET_SWITCH_THEME || true, // 点击宠物挂件切换博客主题
+    process.env.NEXT_PUBLIC_WIDGET_PET_SWITCH_THEME || false, // 点击宠物挂件切换博客主题
 
   SPOILER_TEXT_TAG: process.env.NEXT_PUBLIC_SPOILER_TEXT_TAG || '', // Spoiler文本隐藏功能，如Notion中 [sp]希望被spoiler的文字[sp]，填入[sp] 即可
 
   // 音乐播放插件
-  MUSIC_PLAYER: process.env.NEXT_PUBLIC_MUSIC_PLAYER || false, // 是否使用音乐播放插件
+  MUSIC_PLAYER: process.env.NEXT_PUBLIC_MUSIC_PLAYER || true, // 是否使用音乐播放插件
   MUSIC_PLAYER_VISIBLE: process.env.NEXT_PUBLIC_MUSIC_PLAYER_VISIBLE || true, // 是否在左下角显示播放和切换，如果使用播放器，打开自动播放再隐藏，就会以类似背景音乐的方式播放，无法取消和暂停
   MUSIC_PLAYER_AUTO_PLAY:
     process.env.NEXT_PUBLIC_MUSIC_PLAYER_AUTO_PLAY || true, // 是否自动播放，不过自动播放时常不生效（移动设备不支持自动播放）
@@ -33,22 +33,93 @@ module.exports = {
   MUSIC_PLAYER_CDN_URL:
     process.env.NEXT_PUBLIC_MUSIC_PLAYER_CDN_URL ||
     'https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js',
-  MUSIC_PLAYER_ORDER: process.env.NEXT_PUBLIC_MUSIC_PLAYER_ORDER || 'list', // 默认播放方式，顺序 list，随机 random
+  MUSIC_PLAYER_ORDER: process.env.NEXT_PUBLIC_MUSIC_PLAYER_ORDER || 'random', // 默认播放方式，顺序 list，随机 random
   MUSIC_PLAYER_AUDIO_LIST: [
     // 示例音乐列表。除了以下配置外，还可配置歌词，具体配置项看此文档 https://aplayer.js.org/#/zh-Hans/
     {
-      name: '风を共に舞う気持ち',
-      artist: 'Falcom Sound Team jdk',
-      url: 'https://music.163.com/song/media/outer/url?id=731419.mp3',
+      name: '天井の星を見上げて',
+      artist: 'Arte Refact',
+      url: 'https://music.163.com/song/media/outer/url?id=32235544.mp3',
       cover:
-        'https://p2.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+            'https://p2.music.126.net/04BNO_9HnY_JewREA1KWSQ==/2921402396652922.jpg?param=130y130'
     },
     {
-      name: '王都グランセル',
-      artist: 'Falcom Sound Team jdk',
-      url: 'https://music.163.com/song/media/outer/url?id=731355.mp3',
+      name: 'コトダマ紬ぐ未来',
+      artist: '山崎もえ',
+      url: 'https://music.163.com/song/media/outer/url?id=427419615.mp3',
       cover:
-        'https://p1.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+            'https://p2.music.126.net/yWCEGRrdrNlZMHZJ5ZFrBg==/1366692968105602.jpg?param=130y130'
+    },
+    {
+      name: 'Snowdream',
+      artist: 'VibeNova',
+      url: 'https://music.163.com/song/media/outer/url?id=568709232.mp3',
+      cover:
+            'https://p1.music.126.net/vI69Lo8XO58-RwFk_NfwhQ==/109951163320249765.jpg?param=130y130'
+    },
+    {
+      name: 'School days',
+      artist: 'Funczion SOUNDS',
+      url: 'https://music.163.com/song/media/outer/url?id=727470.mp3',
+      cover:
+            'https://p1.music.126.net/goHT6OraLkoxvnOAV0FotA==/2515682604416416.jpg?param=130y130'
+    },
+    
+    {
+      name: '从别后',
+      artist: '悟我',
+      url: 'https://music.163.com/song/media/outer/url?id=1406025645.mp3',
+      cover:
+            'https://p1.music.126.net/sb5vlbS_Vt5lg9tKtbMxTA==/109951164511663354.jpg?param=130y130'
+    },
+    {
+      name: 'Letter',
+      artist: 'SHES',
+      url: 'https://music.163.com/song/media/outer/url?id=1407540299.mp3',
+      cover:
+            'https://p2.music.126.net/WMI23jw0cR1LqASqTFsc1g==/109951164768758120.jpg?param=130y130'
+    }, 
+      {
+      name: 'WHITE ALBUM PIANO',
+      artist: '石川真也',
+      url: 'https://music.163.com/song/media/outer/url?id=32303027.mp3',
+      cover:
+            'https://p1.music.126.net/NN-AEi5dGnBb9YQwd0_sdQ==/7824124744135817.jpg?param=130y130'
+    },
+    {
+      name: 'あの森で待ってる',
+      artist: 'ボンジュール鈴木',
+      url: 'https://music.163.com/song/media/outer/url?id=30798046.mp3',
+      cover:
+            'https://p1.music.126.net/XV1sdSej-Tl1J7dGPeQdxQ==/7841716929549407.jpg?param=130y130'
+    },
+    {
+      name: '永遠に咲く花',
+      artist: 'AiRI',
+      url: 'https://music.163.com/song/media/outer/url?id=451521472.mp3',
+      cover:
+            'https://p1.music.126.net/e5kyVkJAjazSNLwbGC0WKQ==/18665309394734377.jpg?param=130y130'
+    },
+    {
+      name: '如旧',
+      artist: 'YGY / 洛天依 / 乐正绫',
+      url: 'https://music.163.com/song/media/outer/url?id=1305123469.mp3',
+      cover:
+            'https://p1.music.126.net/7lNhsQb-4WOhqOFBo66duw==/109951163518204926.jpg?param=130y130'
+    },
+    {
+      name: '歌に形はないけれど',
+      artist: '花たん',
+      url: 'https://music.163.com/song/media/outer/url?id=27548281.mp3',
+      cover:
+            'https://p2.music.126.net/sK2Rsvagw2iHFG6_jTqb3Q==/5752644836589495.jpg?param=130y130'
+    },
+    {
+      name: '秦时明月-国色天香',
+      artist: '魏小涵',
+      url: 'https://music.163.com/song/media/outer/url?id=29812086.mp3',
+      cover:
+            'https://p1.music.126.net/qHmcj1gZqTocz4rdANOw4w==/18682901580934552.jpg?param=130y130'
     }
   ],
   MUSIC_PLAYER_METING: process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING || false, // 是否要开启 MetingJS，从平台获取歌单。会覆盖自定义的 MUSIC_PLAYER_AUDIO_LIST，更多配置信息：https://github.com/metowolf/MetingJS
