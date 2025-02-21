@@ -13,7 +13,7 @@ const CONFIG = {
   MATERY_MENU_CATEGORY: false, // 显示分类
   MATERY_MENU_TAG: false, // 显示标签
   MATERY_MENU_ARCHIVE: true, // 显示归档
-  MATERY_MENU_SEARCH: true, // 显示搜索
+  MATERY_MENU_SEARCH: false, // 显示搜索
 
   MATERY_POST_LIST_COVER: true, // 文章封面
   MATERY_POST_LIST_SUMMARY: true, // 文章摘要
